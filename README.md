@@ -11,7 +11,7 @@ The anomaly detection system is designed to analyze user transaction data and fl
 2. **Feature Engineering**: Various features are engineered based on transaction behavior, such as the number of transactions per user, the average transaction amount, and time-based features (e.g., is it a weekend?).
 3. **Modeling**: The **Isolation Forest** and **DBSCAN** models are trained on the engineered features to detect anomalies. The Isolation Forest model is the primary model used for predicting anomalies in deployment, with DBSCAN serving for additional insight into the data.
 4. **Explainability**: The **SHAP** method is used to generate human-readable explanations for the flagged anomalies, providing transparency into the model’s decisions.
-5. **Deployment**: The model is deployed using **FastAPI** (for model inference) and **Streamlit** (for the user interface), allowing for easy interaction with the system for both uploading transaction data and receiving predictions.
+5. **Deployment**: The model is deployed using CLI.
 
 
 ### **Parsing Logic Explanation**
@@ -128,5 +128,6 @@ The system uses two machine learning models for anomaly detection:
    ```bash
  python main.py synthetic_dirty_transaction_logs.csv --output output.csv
    ```
+
 
 
